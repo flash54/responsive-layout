@@ -1,0 +1,420 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.875rem;
+    margin: 0;
+    line-height: 1.1;
+    color: #A59678;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.container {
+    width: Min(90%, 1200px);
+    margin: 0 auto;
+
+}
+
+.btn {
+    background-color: #A59678;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    border-radius: 2rem;
+}
+
+.btn:hover {
+    background-color: #FFFFFF;
+    color: #A59678;
+}
+
+.col + .col {
+    margin-top: 2.5rem;
+}
+
+/* HEADER */
+
+header {
+    background-color: #2E323F;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*NavToggle */
+.btn__wrapper {
+    position: relative;
+}
+
+.navtoggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: #FFFFFF;
+    color: #2E323F;
+    border: 0;
+    cursor: pointer;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    opacity: 0.8;
+
+    transition: opacity 350ms ease;
+}
+
+.navtoggle:hover {
+    opacity: 1;
+}
+
+.hamburger {
+    width: 70%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    height: 4px;
+    background: #2E323F;
+    display: block;
+    margin: 0 auto;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/*NavToggle */
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    visibility: hidden;
+    max-height: 0;
+    position: absolute;
+}
+
+.nav__visible {
+    visibility: visible;
+    max-height: 50rem;
+    position: relative;
+    transition: all 500ms ease;
+}
+
+.navitem + .navitem {
+    margin-top: 0.4rem;
+}
+
+.navlink {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    opacity: 0.8;
+}
+
+.navlink:hover {
+    opacity: 1;
+}
+
+.navlink__btn {
+    opacity: 1;
+}
+
+
+
+/* MAIN / SECTION 1 */
+.section1 {
+    background-color: #3B4050;
+    padding: 3rem 0;
+}
+
+.section1 h1 {
+    color: #FFFFFF;
+    font-size: Min(4.5rem, 5.625rem);
+}
+
+.section1 span {
+    color: #A59678;
+}
+
+.section1 p {
+    color: white;
+    font-size: Min(1.1875rem, 1.5rem);
+}
+
+.section1 h1,
+.section1 p,
+.section1 h2 {
+    text-align: center
+}
+
+.section1 .sectionlink {
+    padding: .5rem 2rem;
+    font-size: 24px;
+}
+
+
+
+/* SECTION 2 */
+.section2{
+    background-color: hsla(226, 15%, 27%, 0.1);
+    padding: 3rem 0;
+}
+
+.section2 h2,
+.section2 p {
+    text-align: center
+}
+
+
+
+/* SECTION 3 */
+.section3{
+    padding: 3rem 0;
+}
+
+.section3__body h2 {
+    font-size: Min(30px, 36px);
+}
+
+.section3__body p {
+    font-size: Min(18px, 21px);
+}
+
+.section3__sidebar .col {
+    background-color: #3B4050;
+    color: white;
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+}
+
+.section3__sidebar h2 {
+    font-size: Min(26px, 30px);
+    color: #FFFFFF;
+}
+
+.section3__sidebar p {
+    font-size: Min(16px, 18px);
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #3B4050;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 0 0 2.5rem;
+    text-transform: capitalize;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+footer h3 {
+    font-size: 21px;
+}
+
+footer li {
+
+    margin: 1rem 0;
+}
+
+footer a {
+    font-size: 16px;
+    opacity: 0.7;
+    text-transform: capitalize;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+
+
+@media (min-width: 43.75rem) {
+
+    .col + .col {
+        margin-top: 0;
+    }
+
+    /* HEADER / NAV*/
+    header {
+        text-align: left;
+    }
+
+    header .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn__wrapper {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        position: relative;
+        display: flex;
+    }
+
+    .navlist {
+        display: flex;
+        align-items: center;
+    }
+
+    .navlist__secondary {
+        margin-left: 2rem;
+    }
+
+    .navitem + .navitem {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+
+    /* SECTION 1 */
+    .section1 {
+        padding: 4rem 0;
+    }
+
+    /* SECTION 2 & 3 */
+    .section2 .row,
+    .section3__sidebar .row {
+        display: flex;
+    }
+
+    .section2 .col + .col,
+    .section3__sidebar .col + .col {
+        margin-left: 2rem;
+    }
+
+    /* FOOTER */
+    .second__col .row {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+@media (min-width: 62.5rem) {
+
+    /* HEADER / NAV */
+
+    .navlist__secondary {
+        margin-left: 4rem;
+    }
+
+    .navitem + .navitem {
+        margin-left: 2.5rem;
+    }
+
+    /* SECTION 1 */
+    .section1 {
+        padding: 8rem 0;
+    }
+
+    .section1 .row {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .section1 .col + .col {
+        padding: 0 5rem;
+    }
+
+    .section1 h1,
+    .section1 p,
+    .section1 h2 {
+        text-align: left;
+    }
+
+    /* SECTION 3 */
+    .section3 .row {
+        display: flex;
+    }
+
+    .section3 .col + .col {
+        margin-left: 6rem;
+    }
+
+    .section3__sidebar .row {
+        display: block;
+    }
+    
+    .section3__sidebar .col + .col {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        text-align: left;
+    }
+
+    footer .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .col {
+        width: 100%;
+    }
+
+    footer .col + .col {
+        margin-left: 5rem;
+    }
+}
